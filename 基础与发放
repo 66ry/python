@@ -1,0 +1,59 @@
+# # # print('hello'),单行注释ctrl +/ 多行注释... ....
+# # # 变量：容器
+# # # 弱语言：变量声明不很严格
+# # # 格式：变量名=值
+# # # 变量名的规范：
+# # # 字母数字下划线,不可使用关键字
+# # a1 = 100
+# # # b += 200
+# # # 不能数字开头
+# # # 严格区分大小写
+# # print(a1)
+# # 见名知义
+# # getName
+# # get_name_by_line = 'hello'
+# # 变量的类型
+# # 数字类型：
+# # int类型整型
+# # float
+# # string
+# # # boolean
+# money=10.9
+# print(type(money))#print()内置函数负责输出结果
+# #money后面的值允许变化#通过type测类型
+# mone='2'
+# print(type(mone))
+# # 使用单双引号是字符串
+# money='''1000'''
+# print(type(money))
+# message='两；”发货的回复“'
+# print(message)
+# shi='''
+# 静夜思⑴
+# 床前明月光⑵，疑是地上霜⑶。
+# 举头望明月⑷，低头思故乡。 [1-3]
+# '''
+# print(shi)
+# # 三引号保留原格式输出
+# # 布尔类型 ture false是关键字
+# isLogin=True
+# print(isLogin)
+# # 类型转换
+# print('hello')
+# name='李泽'
+# print(name)
+# input('请输入函数；')
+# # input（）阻塞型函数
+# # 声明变量打印变量name=29 print(name)
+# # 打印结果print('梁飞')
+# user_name=input("dhf ")
+# print(user_name)
+# print(type(user_name))
+money=input("请写情书给我：")
+# print(money)
+# print(type(money))
+# print(money+100)
+# 类型转换 在前面加转入的类型int(money)
+print(money+str(1000))
+counter=100
+print (counter)
