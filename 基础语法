@@ -5,4 +5,17 @@
 四：条件语句 if...else....  python 不支持switch语句多个条件判断只能用elif
 五：循环语句：for循环又叫重复循环语句 和while循环判断正确执行语句  python中没有do...while...循环，循环控制语句break,continue。pop()函数用于移除列表中的一个元素（默认最后一个元素并返回该值）,append()在列表末尾添加新的对象，while中使用if while..else
 六：for循环语句：
+input()输出的是字符串 加减需要字符转换
+str-->int int(a) 如果是’3.3‘是字符串还带小数点转为int时出错
+str float()
+float-->int() 会把小数点后的位数去掉
+当变量的值是零和空字符串转布尔为falase   bool
+运算符
+算术运算符 +——*/
+print(a,b,c)输出结果之间是空格，让输出之间不是空格用sep='#'更改如print(a,b,c,sep='#')之间是井号，箭头指向为下一行因为有print(a,b,c,end='\n')不让箭头指向下一行去\n
+print(2/3)结果有小数点 print(//)整除 print(a**b)a的b次方，print(%)取余2%3=1
+如键盘输入个位十位百位
+print(123%10)个位
+print（123//10%10）十位
+print(123//100)百位
 
