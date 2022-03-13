@@ -34,3 +34,9 @@ and or not结果为布尔类型 and与print（a and b）两个都为非零时结
 1.算术运算符
 2.赋值运算符 = += -= 3.比较运算符< > == != 4.逻辑运算符and or not 5.位运算符 & | ^- << >> -7的负数二进制
 6.运算符的优先级：加（）可改变优先级的顺序
+条件语句
+if ..else..   if..elif..else....
+if 条件的语句
+abs()内置函数绝对值
+导入函数随机值 imoprt random  ,ran=random.randint()
+%还有格式化输出的意思 如user=name print('%s' %user)
