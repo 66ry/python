@@ -40,3 +40,9 @@ if 条件的语句
 abs()内置函数绝对值
 导入函数随机值 imoprt random  ,ran=random.randint()
 %还有格式化输出的意思 如user=name print('%s' %user)
+格式：c=a if a<b else b 符合是c=a否则是b
+自动类型转换：在python中，转换成为布尔值时，只有 0，'',"",(),[],{}会被转换成false,其它转换true
+循环语句
+1.while 2.for
+while 条件：
+  要循环的代码
