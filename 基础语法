@@ -53,3 +53,4 @@ while n<=10:
     #变量要有变化
     n +=1 
     while中加break跳出整个循环
+   for i in range(1,10):range包括前不包括后，range(n):默认从0开始取值到n-1结束，range(start,stop):[start,stop），range(start,stop,step)步长
