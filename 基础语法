@@ -57,4 +57,4 @@ while n<=10:
   for ..else.. while..esle 不被中断才会执行else
   for和while区别... for i in rande(n): pass 有固定的次数   while 条件：pass 不确定的次数循环
   掷色子
-  
+  学习
