@@ -57,4 +57,9 @@ while n<=10:
   for ..else.. while..esle 不被中断才会执行else
   for和while区别... for i in rande(n): pass 有固定的次数   while 条件：pass 不确定的次数循环
   掷色子
-  学习
+  while n<5:外层控制行数
+    ...
+    while m<n:
+      print('*',end='')内层控制打印*
+     n+=1
+     print()
