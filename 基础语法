@@ -66,3 +66,11 @@ while n<=10:
      切片操作
      id（）地址  is是比较两个的地址是否一致
      index索引
+    find:从左向右查找，如果遇到一个结果符合要求的则返回位置，不符合要求返回-1，rfind从右开始查找
+    count:统计指定字符的个数，index与find的区别，index也是表示查找，如果找不到会报错
+    判断startswith,endswith,isalpha,判断是否以什么开头，返回值都是布尔类型
+    ath='https://www.bing.com/images/s_earch?view=detailV2&ccid=s20ksC'
+i=path.find('_')
+print(i)
+
+ 
