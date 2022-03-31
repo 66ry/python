@@ -72,5 +72,9 @@ while n<=10:
     ath='https://www.bing.com/images/s_earch?view=detailV2&ccid=s20ksC'
 i=path.find('_')
 print(i)
+替换内容：replace(old,new,count)默认全部替换，count指定次数
+切割字符：split,rsplit,splitlines,split('分隔符')返回的结果是一个列表
+修改大小写：title，upper，lower
+format()格式化，
 
  
