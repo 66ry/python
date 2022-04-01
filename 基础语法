@@ -76,5 +76,14 @@ print(i)
 切割字符：split,rsplit,splitlines,split('分隔符')返回的结果是一个列表
 修改大小写：title，upper，lower
 format()格式化，
+添加append()
+删除：pop, remove ,clear
+pop(index)；根据下标删除列表中的元素，下标不要超出范围
+remove()根据元素名称删除，如果删除的不存在则报错，如果列表中存在多个同名元素element,只删除遇到的第一个元素，后面的元素不会删除
+insert（）找准位置添加 ，index()根据元素找到该元素的位置下标
+查找
+1.元素 in列表 返回bool类型
+2，列表.index(元素)返回元素的下标位置，如果没有此元素报错3.列表.count(元素) 返回整数 返回值是0则表示不存在此元素 
+numbers.sort(reverse=True)#默认升序的，可以通过reverse参数控制升序还是降序,numbers.reverse()单纯的进行反转没有排序
 
  
