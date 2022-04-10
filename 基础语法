@@ -180,6 +180,62 @@ print(dict(list1))
 list-->tuple,set(长度有可能发生改变)
 tuple-->list,set
 dict-->list,tuple,set只是将键放在里面
+内置方法
+chr(65)给asill值返回字母
+ord('a')给字母返回数字
+加f，print(f'{name}')其中 { } 相当于占位符，程序运行时花括号部分会变成相应的变量值，如果print('{name}')中 f 被去掉，就是普通的打印功能，原封不动地打印字符串 {name}
+格式化输出
+# library=[{'bookname':'西游记','author':'吴承恩','price':100,'number':40},
+#          {'bookname':'水浒传','author':'是耐盐','price':100,'number':40},
+#          {'bookname':'红楼梦','author':'曹雪芹','price':100,'number':40},
+#          {'bookname':'天珠变','author':'谈三少','price':100,'number':40},
+#          {'bookname':'西游记','author':'哎呦','price':100,'number':40}]
+# choice=int(input('\n1.借书 \n2.还书\n3.查询\n4.查看所有\n5.退出\n请选择你需要的服务:'))
+# while True:
+#     if choice==1:
+#         print('借书')
+#     elif choice==2:
+#         print('还书')
+#     elif choice==3:
+#         choice_chaxun=input('查询人物(1)or作者（2）:')
+#         if choice_chaxun=='1':
+#             print('请输入你要查询的书名')
+#         elif choice_chaxun=='2':
+#             print('请输入你要查询的作者名:')
+#         else:
+#             print('你打错了')
+#     elif choice==4:
+#         print('查看所有')
+#         for book in library:
+#             print(f"图书名:{book['bookname']},作者:{book['author']}")
+#         break
+#     elif choice==5:
+#         print('退出')
+#         break
+#     else:
+#         print('请重新选择')
+# 列表推导式：
+# 格式：[i for i in 可迭代的]
+# list=[]
+# for i in range(1,21):
+#     list.append(i)
+# print(list)
+list1=[i for i in range(1,21)]
+print(list1)
+list1=[i+2 for i in range(1,21)]
+print(list1)
+# 0-100之间的所有偶数 存放到列表中
+list1=[i for i in range(0,101,2)]
+print(list1)
+# 格式2；[i for i in 可迭代的 if 条件]
+list1=[i for i in range(0,101) if i%2==0]
+print(list1)
+list2=['62','hello','100','word','luck','88']
+list3=[word for word in list2 if word.isalpha()]
+print(list3)
+# list2 如果是h开头的将首字母大写，不是h开头的全部转大写
+list4=[word.title() if word.startswith('h') else word.upper() for word in list2]
+print(list4)
 
 
  
