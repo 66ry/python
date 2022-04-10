@@ -172,6 +172,14 @@ dict:键值对存在，键唯一，值允许重复{}
 set:不允许重复，无序
 类型转换
 list-->tuple()
+# list-->dict
+# 特殊要求
+list1=[('a',10),('b',20),('c',30)]
+print(dict(list1))
+类型转换
+list-->tuple,set(长度有可能发生改变)
+tuple-->list,set
+dict-->list,tuple,set只是将键放在里面
 
 
  
