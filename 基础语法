@@ -236,6 +236,96 @@ print(list3)
 # list2 如果是h开头的将首字母大写，不是h开头的全部转大写
 list4=[word.title() if word.startswith('h') else word.upper() for word in list2]
 print(list4)
+64.函数定义
+# # 图书管理系统
+# # 函数：复用
+# def 函数名(参数名):
+#     代码
+# 函数名:get_name():
+# 代码：封装重复内容
+# import random
+# def generate_code():
+#     #生成验证码
+#     s='qwertyuiolkjhgdfaszccvnm123456'
+#     code=''
+#     for i in range(4):
+#         r=random.choice(s)
+#         code+=r
+#     print(code)
+# print(generate_code)
+# #函数调用：函数名()
+# generate_code()
+# def login():
+#     username=input('用户名：')
+#     password=input('密码')
+#     if username=='admin' and password=='1234':
+#         print('登入成功')
+#     else:
+#         print('登入失败')
+# login()
+# 参数：无参数，有参数
+# def 函数名()
+# 有参数
+# def 函数名(参数1....)
+# import random
+# def generate_code(n):
+#     #生成验证码
+#     s='qwertyuiolkjhgdfaszccvnm123456'
+#     code=''
+#     for i in range(n):
+#         r=random.choice(s)
+#         code+=r
+#     print(code)
+# print(generate_code)
+# #函数调用：函数名()
+# generate_code(5)
+# 参数：调用参数时方便传送自己需要的值
+
+'''
+带多个参的函数
+def 函数名(参数1，参数2)
+注意;
+在定义
+默认值参数；在函数定义时，有一个或多个函数已经赋值
+def 函数名（参数1，参数2=值...）
+注意：在定义参数时，普通参数位于定义参数的前面
+默认参数顺序是固定的解决方法调用时用关键字
+'''
+# def get_sum(a,b):
+#     if type(a)==type(b):
+#         s=a+b
+#         print(s)
+#     else:
+#         print('类型不一致')
+#
+# get_sum(2,5)
+# get_sum('hello',3)
+#判断是否整型，isinstance(变量，类型):--》返回值是布尔类型
+# def get_sum(a,b):
+#     print('函数中:',a,b)
+#     if isinstance(a,int) and isinstance(b,int):
+#
+#         s=a+b
+#         print(s)
+#     else:
+#         print('类型不一致')
+#
+# get_sum(2,5)
+# get_sum('hello',3)
+#判断用户是否成功登入
+# def islogin(username,password,isrember=False):
+#     print('是否记住密码?',isrember)
+#     #函数体验证usernaem和password
+#     if username=='admin' and password=='1234':
+#         print('登入成功')
+#     else:
+#         print('失败')
+# islogin('admin','1234')
+def borrow_book(bookname,username,number=1,school='100phone'):
+    print('进入{}借书系统...'.format(school))
+    print('{}要借阅的书名是:{},数量{}'.format(username,bookname,number))
+borrow_book('狂人','发')
+borrow_book(username='阿泽',bookname='水浒传')
 
 
  
