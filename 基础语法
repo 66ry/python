@@ -411,6 +411,148 @@ show_book('龙少','小人',**book)
 print(book,'hello',sep='---')
 result="_".join(['a','b'])
 print(result)
+71：函数的返回值
+'''
+参数：外界向里面传值
+返回值；里面的内容向外界传递
+def 函数名（参数）：
+    .....
+    return xxxx
+当函数调用时通过return向外返回值
+注意：只有函数有返回值，则需要接收
+return 后面的值可以是一个值，也可以是多个值
+如果是多个值 类似：return a,b,c,会将多个值封装在元组里
+结果(a,b,c)
+'''
+# def get_sum(*args):
+#     total=0
+#     for i in args:
+#         total+=i
+#         #将total值返回
+#     print('内部',total)
+#     return total
+# t=get_sum(1,2,3)
+# print('外侧',t)
+# x=100
+# x=x+t
+# print(x)
+def get_maxandmin(numbers):
+    #排序冒泡排序
+    for i in range(0,len(numbers)-1):
+        for j in range(0,len(numbers)-1-i):
+            if numbers[j]>numbers[j+1]:
+                numbers[j],numbers[j+1]=numbers[j+1],numbers[j]
+    min=numbers[0]#获取头部和尾部
+    max=numbers[-1]
+    return min,max#返回
+
+list1=[23,45,13,57,89,90,34,67]
+result=get_maxandmin(list1)
+print(result)
+a,b=get_maxandmin(list1)
+print(a,b)
+74全局变量和局部变量
+'''
+全局和局部变量
+声明函数外面的称作全部变量
+声明在函数内部的变量，称作局部变量
+函数内部可以直接使用全局变量，但不能修改全局变量
+如果修改全局变量，则必须使用关键字，global 变量名
+
+'''
+# islogin=False
+# def login(username,password):
+#     if username=='admin' and password=='1234':
+#         print('登入成功')
+#         global islogin
+#         islogin =True
+#     else:
+#         print('登入失败')
+#
+# def borrow_books(book_name):
+#
+#     if islogin:
+#         print('成功借阅{}'.format(book_name))
+#     else:
+#         print('用户还没有登入，不能借书')
+#         username=input('用户名：')
+#         password=input('密码：')
+#         login(username,password)
+#--------------===
+# def borrow_books(book_name):
+#     username=input('用户名：')
+#     password=input('密码：')
+#     if islogin(username,password):
+#         print('成功借阅{}'.format(book_name))
+#     else:
+#         print('还未登入，不能借书')
+# borrow_books('草房子')
+# borrow_books('草房子')
+#11111111111111111111111111111111111111111111111111111
+a=100
+def test1():
+    a=0
+    b=8
+    print('a=',a)
+    print('b=',b)
+def test2():
+    b=9
+    print('a=', a)
+    print('b=', b)
+def test3():
+    global a
+    a=90
+    print('a=', a)
+
+test1()
+test3()
+test2()
+'''
+全局变量和局部变量
+global关键字的添加：
+只有不可变的类型才需要添加global
+可变的类型不需要添加global
+可变与不可变：
+不可变：当改变变量的值时，地址发生了改变
+类型：int str float bool tuple
+可变类型：里面的内容发生改变时地址没有发生改变
+类型；list divt set
+'''
+a=[1,2]
+print(id(a))
+a=[35,4]
+print(id(a))
+75：停车计费系统
+import random
+car_park=[]
+def enter():
+    print('欢迎进入xx停车场')
+    number=input('输入车牌号:')
+    #构建结构{'车牌':[0,5]}
+    car={}
+    car[number]=[0]#字典的value初值
+    #添加car_park
+    car_park.append(car)
+    print('{}已经进场'.format(number))
+def go_out():
+    number=input('输入车牌号码;')
+    #判断汽车是否进场
+    for car in car_park:
+        if number in car:
+            time=random.randint(0,24)
+            time_record=car.get(number)#get()获得字典的value值
+            time_record.append(time)#要出去的时间给记录
+            #计算花费多少钱
+            total=time*4
+            print('{}停车{}小时,应缴费{}'.format(number,time,total))
+            break
+
+        else:
+            print('此车未进场')
+enter()
+go_out()
+#dict.get(key)=value
+
 
 
 
