@@ -553,6 +553,121 @@ enter()
 go_out()
 #dict.get(key)=value
 76函数注释
+'''
+# 引用
+1.不是在函数中使用，可以通过sys.getrefcount()引用个数
+del 变量 表示删除了一个引用
+2.函数的引用：
+分清传递的值可变类型还是不可变类型
+可变，里面发生变化，外层能看到改变后的内容
+不可变，里面发生变化，不会影响外部得到的变量值
+
+
+# '''
+# a=10
+# b=a
+# c=a
+# print(id(a))
+#
+# import sys
+# print(sys.getrefcount(a))#获取它的引用次数sys.getrefcount(a)调用这个方法也引用一次
+# list1=[1,2,3,4,5]
+# list2=list1
+# list3=list1
+# print(sys.getrefcount(list1))
+# del list3
+# print(sys.getrefcount(list1))
+# def test(n1):
+#     for i in range(n1):#n是一个值
+#         #n1是函数的局部变量
+#         print('--->',i)
+#     n1+=1
+# n=9
+# test(n)
+# print(n)
+# ------------------------------
+# list1=[1,2,3]
+# def test1(l):
+#     if isinstance(l,list):
+#         for i in l:
+#             print('+++++++>',i)
+#         l.insert(0,6)
+#     else:
+#             print('不是列表类型')
+# test1(list1)
+# print(list1)
+'''
+闭包：在一个函数内部可以定义另一个函数，有了嵌套函数这种结构，便会产生闭包问题
+
+'''
+# def outer():
+#     a=100
+#     def inner():
+#         b=200
+#         # b+=a #内部函数可以使用外部函数的变量
+#         nonlocal a# 如果想修改外部函数的变量，需要在内部函数中添加：nonlocal
+#         a+=b #内部函数不能修改外部函数的变量
+#         print('我是内部函数',b)
+#     result=locals()#locala()查看函数的局部变量，以字典形式返回
+#     print(result)
+#     print(a)
+#     #调用inner
+#     inner()
+#     # print(inner)
+# outer()
+# ------------------
+# 内层函数->外层函数-》全局-》系统函数
+# a=100
+# def outer():
+#     a=200
+#     def inner():
+#         nonlocal a
+#         a-=50
+#         print('内部函数',a)
+#     print(a)
+#     inner()
+#
+# outer()
+# print(a)
+# -----------------------------------------------------------
+# '''
+# 闭包；
+# 1.嵌套函数
+# 2.内部函数引用外部函数的变量
+# 3.返回值是内部函数
+# '''
+# def outer(n):
+#     a=10
+#     def inner():
+#         b=a+n
+#         print('内部函数',b)
+#     return inner
+# r=outer(5)#仍出来outer中的inner地址可以r()调用
+# print(r)
+# r()
+# ===================================
+'''
+函数：
+函数返回值:return 
+return可以返回一个或多个值，也可以单独使用return关键字
+return a
+return a,b-->(a,b)
+return也表示结束函数的调用
+全局和局部：
+1.全局变量是不可变类型，必须添加global关键字，全局变量可变类型无需添加
+2.查看全局变量的使用global-->是一个字典，分成系统2.自定义
+'''
+def abc():
+    print('**************888')
+    for i in range(10):
+        if i==6:
+           return 
+        print('-------->',i)
+    print('***************8888888')
+r=abc()
+print(r)#调用的函数中没有返回值拿到的结果是none
+1.	
+
 
 
 
